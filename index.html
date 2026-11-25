@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Alberto Ávila Orero, estudiante de DAW y técnico en sistemas. Proyectos, tecnologías, formación y terminal interactiva.">
+    <meta name="theme-color" content="#0b0e13">
+    <title>Alberto.dev | Portfolio</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23171d26'/%3E%3Cpath d='M24 20 12 32l12 12m16-24 12 12-12 12M36 16 28 48' fill='none' stroke='%23b4f34d' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/terminal.css">
+    <script src="js/theme.js" defer></script>
+    <script src="js/projects.js" defer></script>
+    <script src="js/terminal.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#inicio">Saltar al contenido</a>
+    <header class="header container">
+        <a class="brand" href="#inicio" aria-label="Alberto.dev, inicio"><span class="brand-icon" aria-hidden="true">&lt;/&gt;</span> alberto<span class="accent">.dev</span></a>
+        <nav aria-label="Navegación principal">
+            <a href="#terminal">Terminal</a>
+            <a href="#tecnologias">Tecnologías</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <div class="header-end">
+            <span class="eyebrow edition">PORTFOLIO / 2026</span>
+            <button id="theme-button" class="icon-button" type="button" aria-label="Cambiar a tema claro" title="Cambiar tema"><span id="theme-icon" aria-hidden="true">☀</span></button>
+        </div>
+    </header>
+
+    <main id="inicio" class="container bento">
+        <section class="card hero span-2" aria-labelledby="name">
+            <div class="availability"><span aria-hidden="true"></span> Disponible para prácticas</div>
+            <p class="eyebrow">HOLA, SOY</p>
+            <h1 id="name">Alberto Ávila<br class="desktop-break"> Orero<span class="accent">.</span></h1>
+            <h2 class="hero-subtitle">Construyendo mi futuro digital.</h2>
+            <p class="muted hero-description">Estudiante de 2.º de Desarrollo de Aplicaciones Web y técnico en Sistemas Microinformáticos y Redes. Me interesa el desarrollo de software, la tecnología y seguir aprendiendo con proyectos reales.</p>
+            <div class="actions">
+                <a class="button primary" href="https://github.com/Alberto-Avila-Orero" target="_blank" rel="noopener noreferrer">Mi GitHub <span aria-hidden="true">↗</span></a>
+                <a class="button" href="docs/Alberto_Avila_Orero_CV.pdf" target="_blank" rel="noopener noreferrer">Mi currículum <span aria-hidden="true">↗</span></a>
+            </div>
+        </section>
+
+        <aside class="card identity" aria-label="Identidad visual y ubicación">
+            <svg class="orbit" viewBox="0 0 240 240" aria-hidden="true">
+                <circle cx="120" cy="120" r="96" fill="none" stroke="currentColor" stroke-dasharray="2 9" opacity=".4"/>
+                <circle cx="120" cy="120" r="73" fill="none" stroke="currentColor" opacity=".25"/>
+                <ellipse cx="120" cy="120" rx="108" ry="37" transform="rotate(-40 120 120)" fill="none" stroke="currentColor" stroke-width="1.4"/>
+                <ellipse cx="120" cy="120" rx="108" ry="37" transform="rotate(40 120 120)" fill="none" stroke="currentColor" stroke-width="1.4"/>
+                <text x="120" y="139" text-anchor="middle" fill="currentColor" font-size="58" font-weight="700" font-family="monospace">AA</text>
+                <circle cx="194" cy="58" r="5" fill="currentColor"/>
+                <circle cx="46" cy="182" r="3" fill="currentColor"/>
+            </svg>
+            <p class="identity-title">DEVELOPER IN PROGRESS</p>
+            <p class="muted">Torremolinos, España</p>
+        </aside>
+
+        <section id="terminal" class="terminal span-3" aria-labelledby="terminal-title">
+            <div class="terminal-header">
+                <div class="terminal-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+                <span class="terminal-window-name">alberto@portfolio — terminal</span>
+                <button type="button" id="terminal-expand" class="terminal-expand" aria-expanded="false" aria-label="Ampliar terminal" title="Ampliar terminal">⤢</button>
+            </div>
+            <div class="terminal-body">
+                <div class="terminal-caption"><h2 id="terminal-title">&gt;_ TERMINAL INTERACTIVA</h2><span>● Online</span></div>
+                <div id="terminal-output" role="log" aria-label="Respuestas de la terminal" aria-live="polite" tabindex="0">
+                    <p>Bienvenido a alberto.dev v1.0</p>
+                    <p>Sistema iniciado correctamente.</p>
+                    <p>Escribe <span class="terminal-highlight">'help'</span> para comenzar.</p>
+                </div>
+                <form id="terminal-form">
+                    <label for="terminal-input" class="prompt">alberto@portfolio:~$</label>
+                    <input type="text" id="terminal-input" aria-label="Comando de la terminal" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Escribe un comando...">
+                    <button type="submit" aria-label="Ejecutar comando" title="Ejecutar comando">↵</button>
+                </form>
+                <div class="quick-commands" aria-label="Comandos rápidos">
+                    <button type="button" data-command="help">help</button><button type="button" data-command="whoami">whoami</button><button type="button" data-command="skills">skills</button><button type="button" data-command="projects">projects</button><button type="button" data-command="theme">theme</button><button type="button" data-command="history">history</button><button type="button" data-command="clear">clear</button>
+                </div>
+                <p class="terminal-tip">Tab: autocompletar · ↑ ↓: historial</p>
+            </div>
+        </section>
+
+        <section class="card span-2" id="tecnologias" aria-labelledby="stack-title">
+            <div class="section-heading"><h2 id="stack-title">Mi stack tecnológico</h2><span class="section-icon" aria-hidden="true">▱</span></div>
+            <p class="muted">Tecnologías y herramientas que utilizo durante mi formación.</p>
+            <ul class="tech-list">
+                <li><span class="tech-icon html" aria-hidden="true">5</span>HTML5</li>
+                <li><span class="tech-icon css" aria-hidden="true">3</span>CSS3</li>
+                <li><span class="tech-icon js" aria-hidden="true">JS</span>JavaScript</li>
+                <li><span class="tech-icon java" aria-hidden="true">J</span>Java</li>
+                <li><span class="tech-icon php" aria-hidden="true">php</span>PHP</li>
+                <li><span class="tech-icon mysql" aria-hidden="true">SQL</span>MySQL</li>
+                <li><span class="tech-icon git" aria-hidden="true">Git</span>Git</li>
+                <li><span class="tech-icon github" aria-hidden="true">GH</span>GitHub</li>
+            </ul>
+        </section>
+
+        <section class="card education" aria-labelledby="education-title">
+            <span class="section-icon" aria-hidden="true">⌑</span>
+            <p class="eyebrow">FORMACIÓN ACTUAL</p>
+            <h2 id="education-title">2.º DAW</h2>
+            <p class="muted">Davante · En curso</p>
+        </section>
+
+        <section id="proyectos" class="projects-section span-3" aria-labelledby="projects-title">
+            <div class="section-heading"><h2 id="projects-title">Proyectos destacados</h2><span class="section-icon" aria-hidden="true">&lt;/&gt;</span></div>
+            <div class="filters" role="group" aria-label="Filtrar proyectos">
+                <button type="button" class="filter active" data-filter="all" aria-pressed="true">Todos</button>
+                <button type="button" class="filter" data-filter="ia" aria-pressed="false">IA</button>
+                <button type="button" class="filter" data-filter="web" aria-pressed="false">Desarrollo web</button>
+            </div>
+            <p id="filter-status" class="sr-only" aria-live="polite"></p>
+            <div class="project-grid">
+                <article class="card project span-2" data-category="ia">
+                    <div class="section-heading"><p class="eyebrow">01 / PROYECTO PERSONAL</p><span class="section-icon" aria-hidden="true">✦</span></div>
+                    <figure class="vitalo-preview">
+                        <a class="vitalo-image-link" href="assets/images/vitalo-mobile.png" target="_blank" rel="noopener noreferrer" aria-label="Ampliar captura de Vitalo en una pestaña nueva">
+                            <img src="assets/images/vitalo-mobile.png" alt="Captura real de Vitalo en móvil: panel de entrenamiento, sesiones, racha semanal y comparativa de progreso" width="1206" height="2622" loading="lazy" decoding="async">
+                        </a>
+                        <figcaption>Vista móvil real · Pulsa para ampliar ↗</figcaption>
+                    </figure>
+                    <h3>Vitalo</h3>
+                    <p class="muted">Aplicación web de entrenamiento creada mediante herramientas de inteligencia artificial. Un proyecto personal que combina deporte y tecnología.</p>
+                    <div class="project-bottom"><span class="eyebrow">INTELIGENCIA ARTIFICIAL · NETLIFY</span><a class="button" href="https://prismatic-crumble-916bd5.netlify.app" target="_blank" rel="noopener noreferrer">Ver aplicación ↗</a></div>
+                </article>
+                <article class="card project" data-category="web">
+                    <p class="eyebrow">02 / TFG · DAW</p>
+                    <div class="project-art purple" aria-hidden="true">&lt;/&gt;</div>
+                    <h3>El Rinconcito del Domi</h3>
+                    <p class="muted">Trabajo de Fin de Grado (TFG) de Desarrollo de Aplicaciones Web, actualmente en desarrollo.</p>
+                    <p class="muted project-note">● En desarrollo · Próximamente</p>
+                </article>
+                <article class="card project span-2" data-category="web">
+                    <div class="section-heading"><p class="eyebrow">03 / PROYECTO PERSONAL</p><span class="section-icon" aria-hidden="true">▦</span></div>
+                    <h3>Alberto.dev</h3>
+                    <p class="muted">Portfolio interactivo con diseño Bento Grid, terminal de comandos, filtros de proyectos y personalización del tema.</p>
+                    <div class="project-bottom"><span class="eyebrow">HTML · CSS · JAVASCRIPT</span><a href="#inicio" class="text-link">Explorar portfolio ↑</a></div>
+                </article>
+            </div>
+        </section>
+
+        <section class="card learning" aria-labelledby="learning-title">
+            <div class="section-heading"><h2 id="learning-title">Actualmente aprendiendo</h2><span class="section-icon" aria-hidden="true">↗</span></div>
+            <ul class="learning-list">
+                <li><span style="--dot:#dd0031"></span>Angular</li><li><span style="--dot:#38bdf8"></span>React</li><li><span style="--dot:#47a248"></span>MongoDB</li><li><span style="--dot:#ff554a"></span>Laravel</li><li><span style="--dot:#2496ed"></span>Docker</li>
+            </ul>
+            <p class="muted">En constante evolución.</p>
+        </section>
+
+        <section class="card span-2" id="formacion" aria-labelledby="journey-title">
+            <div class="section-heading"><h2 id="journey-title">Mi trayectoria</h2><span class="section-icon" aria-hidden="true">⌁</span></div>
+            <ol class="timeline">
+                <li><span class="timeline-marker" aria-hidden="true">01</span><div><h3>Desarrollo de Aplicaciones Web</h3><p class="muted">Davante · Grado Superior · En curso</p></div></li>
+                <li><span class="timeline-marker" aria-hidden="true">02</span><div><h3>Sistemas Microinformáticos y Redes</h3><p class="muted">Grado Medio</p></div></li>
+                <li><span class="timeline-marker" aria-hidden="true">03</span><div><h3>Ayuntamiento de Torremolinos</h3><p class="muted">Prácticas FCT · Soporte informático, mantenimiento, sistemas y redes.</p></div></li>
+            </ol>
+            <p class="muted languages">Idiomas: inglés B2 Cambridge (C1 en preparación) · Francés básico.</p>
+        </section>
+
+        <section class="card contact span-3" id="contacto" aria-labelledby="contact-title">
+            <div><p class="eyebrow">CONTACTO</p><h2 id="contact-title">Hablemos<span class="accent">.</span></h2><p class="muted">Busco oportunidades de prácticas profesionales en el sector tecnológico.</p></div>
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/alberto-avila-orero" target="_blank" rel="noopener noreferrer"><span class="contact-symbol" aria-hidden="true">in</span>LinkedIn<span aria-hidden="true">↗</span></a>
+                <a href="mailto:avilaorero@gmail.com"><span class="contact-symbol" aria-hidden="true">@</span>Email<span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/Alberto-Avila-Orero" target="_blank" rel="noopener noreferrer"><span class="contact-symbol" aria-hidden="true">GH</span>GitHub<span aria-hidden="true">↗</span></a>
+                <a href="docs/Alberto_Avila_Orero_CV.pdf" target="_blank" rel="noopener noreferrer"><span class="contact-symbol" aria-hidden="true">CV</span>Currículum<span aria-hidden="true">↗</span></a>
+            </div>
+        </section>
+    </main>
+    <footer class="container footer"><span>© 2026 Alberto Ávila Orero</span><span>HTML · CSS · JavaScript</span></footer>
+</body>
+</html>
